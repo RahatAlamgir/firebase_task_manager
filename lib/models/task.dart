@@ -7,6 +7,7 @@ class Task {
   final String date;
   final String course;
   final String priority;
+
   final bool status;
 
   Task({

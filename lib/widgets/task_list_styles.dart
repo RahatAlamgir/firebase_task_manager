@@ -78,7 +78,7 @@ class TaskListHeader extends StatelessWidget {
           ),
           IconButton(
             tooltip: 'Search',
-            // Search UI is not implemented in the original screen.
+
             onPressed: null,
             icon: const Icon(
               Icons.search_rounded,
@@ -95,8 +95,8 @@ class TaskListHeader extends StatelessWidget {
               );
             },
             icon: const Icon(
-              Icons.tune_rounded,
-              color: TaskListStyles.muted,
+              Icons.notifications,
+              color: TaskListStyles.ink,
               size: 21,
             ),
           ),
