@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_task_manager/screens/notification/notification_page.dart';
 import 'package:flutter/material.dart';
 
@@ -77,17 +78,19 @@ class TaskListHeader extends StatelessWidget {
             ),
           ),
           IconButton(
-            tooltip: 'Search',
+            tooltip: 'Signout',
 
-            onPressed: null,
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+            },
             icon: const Icon(
-              Icons.search_rounded,
+              Icons.logout,
               color: TaskListStyles.muted,
               size: 23,
             ),
           ),
           IconButton(
-            tooltip: 'Show all tasks',
+            tooltip: 'Notification',
             onPressed: () {
               Navigator.push(
                 context,
